@@ -9,23 +9,21 @@ import SwiftUI
 
 struct ListItem: View {
     
-    var hint: String
-    var title: String
-    var summary: String
+    var someThing: Thing
     
     var body: some View {
         HStack {
             
-            Text(hint)
+            Text(someThing.hint)
                 .font(.largeTitle)
             
             VStack(alignment: .leading) {
                 
-                Text(title)
+                Text(someThing.title)
                     .font(.title3)
                     .fontWeight(.bold)
                 
-                Text(summary)
+                Text(someThing.summary)
                     .font(.subheadline)
                 
             }
@@ -37,9 +35,7 @@ struct ListItem: View {
 
 struct ListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ListItem(hint: "⚾️",
-                 title: "Blue Jays",
-                 summary: "Baseball was the fabric of my youth")
+        ListItem(someThing: favoriteThings[0])
             .preferredColorScheme(.dark)
             .padding()
     }
