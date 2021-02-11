@@ -35,7 +35,7 @@ struct ListItem: View {
 
 struct ListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ListItem(someThing: favoriteThings[0])
+        ListItem(someThing: favouriteThings[0])
             .preferredColorScheme(.dark)
             .padding()
     }
